@@ -23,6 +23,16 @@ obj.color = "#ffffff"
 --- Controls the arrow size
 obj.arrowSize = 256
 
+--- FocusHighlight.arrowFadeOutDuration
+--- Variable
+--- Controls the duration in seconds to fade out the arrow
+obj.arrowFadeOutDuration = 1
+
+--- FocusHighlight.arrowFadeOutDuration
+--- Variable
+--- Controls the duration in seconds to fade out the arrow
+obj.highlightFadeOutDuration = 1
+
 local previousFrame = nil
 
 function obj:start()
@@ -61,7 +71,7 @@ function obj:start()
             },
             withShadow = true
           }
-        ):rotateElement(1, angle):show():delete(1)
+        ):rotateElement(1, angle):show():delete(self.arrowFadeOutDuration)
       end
     end
 
@@ -80,7 +90,7 @@ function obj:start()
         strokeJoinStyle = "round",
         withShadow = true,
       }
-    ):show():delete(0.75)
+    ):show():delete(self.highlightFadeOutDuration)
   end)
 end
 

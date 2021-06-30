@@ -31,4 +31,6 @@ Put these in your configuration file.
 spoon.FocusHighlight.color = "#ffffff"
 spoon.FocusHighlight.windowFilter = hs.window.filter.default
 spoon.FocusHighlight.arrowSize = 256
+spoon.FocusHighlight.arrowFadeOutDuration = 1
+spoon.FocusHighlight.highlightFadeOutDuration = 1
 ```
