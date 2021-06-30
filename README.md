@@ -1,6 +1,6 @@
 # FocusHighlight.spoon
 
-Briefly highlights the active window. Useful when switching between multiple displays.
+A macOS utility that briefly highlights the active window when focused. Useful when switching apps on multiple displays, so you know which monitor ends up being focused.
 
 ![Example](example.gif)
 
