@@ -28,10 +28,15 @@ obj.arrowSize = 256
 --- Controls the duration in seconds to fade out the arrow
 obj.arrowFadeOutDuration = 1
 
---- FocusHighlight.arrowFadeOutDuration
+--- FocusHighlight.highlightFadeOutDuration
 --- Variable
---- Controls the duration in seconds to fade out the arrow
+--- Controls the duration in seconds to fade out the highlight
 obj.highlightFadeOutDuration = 1
+
+--- FocusHighlight.highlightFillAlpha
+--- Variable
+--- Controls the alpha opacity for the highlight box
+obj.highlightFillAlpha = 0.1
 
 local previousFrame = nil
 
@@ -80,12 +85,12 @@ function obj:start()
     -- Draw a focus highlight
     hs.canvas.new(window:frame()):appendElements(
       {
-        action = "fill", padding = 0, type = "rectangle",
-        fillColor = { alpha = 0.1, hex = color },
+        action = "fill", padding = 4, type = "rectangle",
+        fillColor = { alpha = self.highlightFillAlpha, hex = color },
       },
       {
         action = "stroke", padding = 4, type = "rectangle",
-        strokeColor = { alpha = 1.0, hex = color },
+        strokeColor = { hex = color },
         strokeWidth = 8,
         strokeJoinStyle = "round",
         withShadow = true,
