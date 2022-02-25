@@ -99,4 +99,8 @@ function obj:start()
   end)
 end
 
+function obj:stop()
+  self.windowFilter:unsubscribe(hs.window.filter.windowFocused)
+end
+
 return obj
