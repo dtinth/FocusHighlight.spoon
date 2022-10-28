@@ -12,16 +12,16 @@ It is implemented as [a Spoon for Hammerspoon](https://github.com/Hammerspoon/ha
 
 2. Install FocusHighlight.spoon using Git:
 
-    ```sh
-    git clone https://github.com/dtinth/FocusHighlight.spoon.git ~/.hammerspoon/Spoons/FocusHighlight.spoon
-    ```
+   ```sh
+   git clone https://github.com/dtinth/FocusHighlight.spoon.git ~/.hammerspoon/Spoons/FocusHighlight.spoon
+   ```
 
 3. Update Hammerspoon configuration file:
 
-    ```lua
-    hs.loadSpoon("FocusHighlight")
-    spoon.FocusHighlight:start()
-    ```
+   ```lua
+   hs.loadSpoon("FocusHighlight")
+   spoon.FocusHighlight:start()
+   ```
 
 ## Customization
 
@@ -34,4 +34,5 @@ spoon.FocusHighlight.arrowSize = 256
 spoon.FocusHighlight.arrowFadeOutDuration = 1
 spoon.FocusHighlight.highlightFadeOutDuration = 1
 spoon.FocusHighlight.highlightFillAlpha = 0.1
+spoon.FocusHighlight.arrowActive = true
 ```
